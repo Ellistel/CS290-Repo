@@ -6,8 +6,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/style.css">
-
+    <link rel="stylesheet" href="style.css">
+    
     <script src="/index.js" charset="utf-8" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="/postTemplate.js" charset="utf-8" defer></script>
@@ -24,6 +24,8 @@
 
   </header>
 
+  <div class = "login-container">
+    <div class = "credentials">
     <form action="/login" method="post">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -32,25 +34,21 @@
       <input type="password" id="password" name="password" required>
 
       <input type="submit" value="Login">
-  </form>
-  
-  <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </form>
+    </div>
+    <div class = "sign-up">
+      <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
 
-  <div class= "blog_title">
-    <h2>Blogs:</h2>
   </div>
-
-
-
-
-
-
-
-
+ <div class = "site-content">
+  <div class = "filter-portion">
+    <div class = "filter-container-title">
+    <h2>Filters</h2>
+    </div>
 
   <aside class="filter-container">
 
-    <h2>Filters</h2>
 
     <div class="filter-input-container">
       <label for="filter-text" class="filter-input-label">Text</label>
@@ -81,58 +79,100 @@
 
   </aside>
 
+  </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class = "blog_post_container">
-
+<div class = "blog-portion">
+  <div class= "blog-title">
+    <h2>Blogs:</h2>
+  </div>
+<div class = "blog-container ">
+  <div class="blog-post-container">
     <a href="https://link_to_this_blog_post.com" class="blog_post_link">
-    <div class = "blog post">
-        <div class = "blog_post_title">
+      <div class="blog-post">
+        <div class="blog-post-title">
           <h2>Title for blog #1</h2>
-        <img src="http://placekitten.com/200/120" alt="Blog_Post_Photo">
-        <p> Some Blog Text</p>
-    </div>
-  </a>
+        </div>
+        <div class="blog-post-image">
+          <img src="http://placekitten.com/200/150" alt="Blog_Post_Photo">
+        </div>
+        <div class="blog-post-text">
+          <p>Some Blog Text</p>
+        </div>
+      </div>
+    </a>
+  </div>
 
-
-
-  <div class = "blog_post_container">
+  <div class="blog-post-container">
     <a href="https://link_to_this_blog_post.com" class="blog_post_link">
-    <div class = "blog post">
-        <div class = "blog_post_title">
+      <div class="blog-post">
+        <div class="blog-post-title">
           <h2>Title for blog #2</h2>
-        <img src="http://placekitten.com/200/150" alt="Blog_Post_Photo">
-        <p> Some Blog Text</p>
-    </div>
-  </a>
+        </div>
+        <div class="blog-post-image">
+          <img src="http://placekitten.com/200/140" alt="Blog_Post_Photo">
+        </div>
+        <div class="blog-post-text">
+          <p>Some Blog Text</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="blog-post-container">
+    <a href="https://link_to_this_blog_post.com" class="blog_post_link">
+      <div class="blog-post">
+        <div class="blog-post-title">
+          <h2>Title for blog #3</h2>
+        </div>
+        <div class="blog-post-image">
+          <img src="http://placekitten.com/200/340" alt="Blog_Post_Photo">
+        </div>
+        <div class="blog-post-text">
+          <p>Some Blog Text</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="blog-post-container">
+    <a href="https://link_to_this_blog_post.com" class="blog_post_link">
+      <div class="blog-post">
+        <div class="blog-post-title">
+          <h2>Title for blog #4</h2>
+        </div>
+        <div class="blog-post-image">
+          <img src="http://placekitten.com/202/140" alt="Blog_Post_Photo">
+        </div>
+        <div class="blog-post-text">
+          <p>Some Blog Text</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="blog-post-container">
+    <a href="https://link_to_this_blog_post.com" class="blog_post_link">
+      <div class="blog-post">
+        <div class="blog-post-title">
+          <h2>Title for blog #5</h2>
+        </div>
+        <div class="blog-post-image">
+          <img src="http://placekitten.com/230/140" alt="Blog_Post_Photo">
+        </div>
+        <div class="blog-post-text">
+          <p>Some Blog Text</p>
+        </div>
+      </div>
+    </a>
+  </div>
 
   </div>
- 
+  
 
+</div>
 
-
-
-
-
-
+</div>
 
 
 
@@ -144,5 +184,5 @@
 
 
     
-</body>
+  </body>
 </html>

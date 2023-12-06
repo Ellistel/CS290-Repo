@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Specific Post Title Placeholder</title>
+    <title>Blog Website Title Placeholder</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/style.css">
-
+    <link rel="stylesheet" href="style.css">
+    
     <script src="/index.js" charset="utf-8" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="/postTemplate.js" charset="utf-8" defer></script>
@@ -24,6 +24,8 @@
 
   </header>
 
+  <div class = "login-container">
+    <div class = "credentials">
     <form action="/login" method="post">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -32,11 +34,13 @@
       <input type="password" id="password" name="password" required>
 
       <input type="submit" value="Login">
-  </form>
-  
-  <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </form>
+    </div>
+    <div class = "sign-up">
+      <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
 
-
+  </div>
 
   <div class = "blog_post_container">
 
