@@ -30,14 +30,35 @@ header a {
   right: 5px;
 }
 
-
+.alignment{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 #draft-post-modal {
-  width: 500px;
-  display: flex;
+  background-color: #ccc;
+  width: 750px;
   justify-content: left;
   margin-left: 50px;
   margin-top: 25px;
   border: 2px solid bisque;
+  z-index: 1;
+}
+
+#draft-post-modal .close-button {
+ position: relative;
+ left: 650px;
+}
+
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 #draft-post-modal label,
@@ -49,7 +70,8 @@ header a {
 }
 
 #postContent{
-  max-width: 350px;
+  max-width: 500px;
+  width: 350px;
 }
 .login-container{
   border-bottom: 2px solid bisque;
@@ -290,4 +312,9 @@ header a {
   display:flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+.hidden
+{
+  display: none;
 }
