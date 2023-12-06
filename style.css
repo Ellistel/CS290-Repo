@@ -11,7 +11,6 @@ header {
   align-items: center;
   position: relative;
   height: 120px;
-  /* margin-bottom: 15px; */
 }
 
 header a {
@@ -31,12 +30,6 @@ header a {
   right: 5px;
 }
 
-/* .hidden{
-
-
-
-} 
-*/
 
 #draft-post-modal {
   width: 500px;
@@ -209,6 +202,92 @@ header a {
 }
 
 .filter-portion{
+  margin-left: 15px;
+  margin-right: 100px;
+}
+
+.main-blog-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  max-width: 750px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.main-blog-post-title {
+  margin-bottom: 20px;
+}
+
+.main-post-image {
+  width: 600px;
+  height: 400px;
+  max-width: 600px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.main-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.main-post-contents {
+  text-align: justify;
+}
+.comment-container{
+  display: flex;
+  flex-direction: column;
+
+}
+.comment{
+  display:flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin: 15px;
+  width: 750px
+
+}
+
+.details{
+  display:flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.comment-content{
+  margin-left:20px;
+}
+
+.username-field{
 
   margin-right: 15px;
+}
+
+.comments-section-title h2{
+
+  border-bottom: 2px solid bisque;
+}
+
+.comment-post-container{
+  display:flex;
+  justify-content: center;
+  border-bottom: 2px solid bisque;
+}
+
+.comment-post-container form{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }

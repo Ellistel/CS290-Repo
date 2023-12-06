@@ -16,99 +16,101 @@
   
   <body>
     <header>
-    <div class="header-image-container">
-      <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      <div class="header-image-container">
+        <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      </div>
+
+      <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
+    </header>
+
+    <div class="login-container">
+      <div class="credentials">
+        <form action="/login" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <div class="sign-up">
+        <p id="sign-up-link">Don't have an account? <a href="/signup">Sign Up</a></p>
+      </div>
     </div>
 
-    <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
-
-  </header>
-
-  <div class = "login-container">
-    <div class = "credentials">
-    <form action="/login" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <input type="submit" value="Login">
-    </form>
-    </div>
-    <div class = "sign-up">
-      <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
-    </div>
-
-  </div>
-
-  <div class = "blog_post_container">
-
-    <div class = "blog post">
-        <div class = "blog_post_title">
+    <div class="main-blog-post-container">
+      <div class="main-blog-post">
+        <div class="main-blog-post-title">
           <h2>Title for blog</h2>
-        <img src="http://placekitten.com/200/120" alt="Blog_Post_Photo">
-        
-        <div class = "post-contents">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra magna ac placerat vestibulum lectus. Nisl rhoncus mattis rhoncus urna neque. Semper viverra nam libero justo. Facilisis gravida neque convallis a cras semper auctor neque. Amet porttitor eget dolor morbi non. Maecenas pharetra convallis posuere morbi leo urna molestie. Ipsum faucibus vitae aliquet nec ullamcorper. Mi sit amet mauris commodo quis imperdiet massa. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Penatibus et magnis dis parturient. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Eros in cursus turpis massa tincidunt. Tempus quam pellentesque nec nam aliquam. Vestibulum morbi blandit cursus risus. At urna condimentum mattis pellentesque id nibh tortor id aliquet. Nec ultrices dui sapien eget mi proin. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Sit amet mattis vulputate enim nulla aliquet porttitor. Ornare massa eget egestas purus viverra.</p>
         </div>
 
+        <div class="main-post-image">
+          <img src="http://placekitten.com/200/120" alt="Blog_Post_Photo">
+        </div>
+        
+        <div class="main-post-contents">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra magna ac placerat vestibulum lectus. Nisl rhoncus mattis rhoncus urna neque. Semper viverra nam libero justo. Facilisis gravida neque convallis a cras semper auctor neque. Amet porttitor eget dolor morbi non. Maecenas pharetra convallis posuere morbi leo urna molestie. Ipsum faucibus vitae aliquet nec ullamcorper...</p>
+        </div>
+      </div>
     </div>
 
-<div class= "comments-section-title">
-    <h2>Comments Section</h2>
-</div>
+    <div class="comments-section-title">
+      <h2>Comments Section</h2>
+    </div>
 
-<div class = "comment-post-container">
-    <form action="/create-comment" method="post" enctype="multipart/form-data">
-        <!-- Display the username of the authenticated user -->
+    <div class="comment-post-container">
+      <form action="/create-comment" method="post" enctype="multipart/form-data">
         <p>Logged in as: USERNAME HERE</p>
         <label for="postContent">Leave a comment:</label>
         <textarea id="postContent" name="postContent" required></textarea>
         <button type="submit">Submit Comment</button>
-    </form>
+      </form>
+    </div>
 
-</div>
-
-
-
-<div class = "comment-container>">
-
-    <div class = "comment">
-        <div class = "username-field">
+    <div class="comment-container">
+      <div class="comment">
+        <div class="details">
+          <div class="username-field">
             <p>USERNAME #1</p>
-        </div>
-        <div class = comment-timestamp>
+          </div>
+          <div class="comment-timestamp">
             <p>TIMESTAMP #1</p>
+          </div>
         </div>
-        <div class = "comment-content"></div>
-            <p>CONTENT #1</p>
+        <div class="comment-content">
+          <p>CONTENT #1</p>
         </div>
-    </div>
+      </div>
 
-    <div class = "comment">
-        <div class = "username-field">
+      <div class="comment">
+        <div class="details">
+          <div class="username-field">
             <p>USERNAME #2</p>
-        </div>
-        <div class = comment-timestamp>
+          </div>
+          <div class="comment-timestamp">
             <p>TIMESTAMP #2</p>
+          </div>
         </div>
-        <div class = "comment-content"></div>
-            <p>CONTENT #2</p>
+        <div class="comment-content">
+          <p>CONTENT #2</p>
         </div>
+      </div>
+
+      <div class="comment">
+        <div class="details">
+          <div class="username-field">
+            <p>USERNAME #3</p>
+          </div>
+          <div class="comment-timestamp">
+            <p>TIMESTAMP #3</p>
+          </div>
+        </div>
+        <div class="comment-content">
+          <p>CONTENT #3</p>
+        </div>
+      </div>
     </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-    
-</body>
+  </body>
 </html>

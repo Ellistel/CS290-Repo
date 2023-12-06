@@ -16,70 +16,65 @@
   
   <body>
     <header>
-    <div class="header-image-container">
-      <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
-    </div>
+      <div class="header-image-container">
+        <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      </div>
 
-    <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
+      <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
+    </header>
 
-  </header>
+    <div class="login-container">
+      <div class="credentials">
+        <form action="/login" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
 
-  <div class = "login-container">
-    <div class = "credentials">
-    <form action="/login" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-
-      <input type="submit" value="Login">
-    </form>
-    </div>
-    <div class = "sign-up">
-      <p id = sign-up-link>Don't have an account? <a href="/signup">Sign Up</a></p>
-    </div>
-
-  </div>
- <div class = "site-content">
-  <div class = "filter-portion">
-    <div class = "filter-container-title">
-    <h2>Filters</h2>
-    </div>
-
-  <aside class="filter-container">
-
-
-    <div class="filter-input-container">
-      <label for="filter-text" class="filter-input-label">Text</label>
-      <div class="filter-input-element">
-        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <div class="sign-up">
+        <p id="sign-up-link">Don't have an account? <a href="/signup">Sign Up</a></p>
       </div>
     </div>
 
-    <fieldset class = "radio-button-filter-fieldset">
-      <label>
-          <input type="radio" name="filter" value="all" checked> All
-      </label>
+    <div class="site-content">
+      <div class="filter-portion">
+        <div class="filter-container-title">
+          <h2>Filters</h2>
+        </div>
 
-      <label>
-          <input type="radio" name="filter" value="today"> Today
-      </label>
+        <aside class="filter-container">
+          <div class="filter-input-container">
+            <label for="filter-text" class="filter-input-label">Text</label>
+            <div class="filter-input-element">
+              <input type="text" name="filter-text" id="filter-text" class="filter-input">
+            </div>
+          </div>
 
-      <label>
-          <input type="radio" name="filter" value="this-week"> This Week
-      </label>
+          <fieldset class="radio-button-filter-fieldset">
+            <label>
+              <input type="radio" name="filter" value="all" checked> All
+            </label>
 
-      <label>
-          <input type="radio" name="filter" value="this-month"> This Month
-      </label>
-    </fieldset>
+            <label>
+              <input type="radio" name="filter" value="today"> Today
+            </label>
 
-    <button id="filter-update-button" class="action-button">Update</button>
+            <label>
+              <input type="radio" name="filter" value="this-week"> This Week
+            </label>
 
-  </aside>
+            <label>
+              <input type="radio" name="filter" value="this-month"> This Month
+            </label>
+          </fieldset>
 
-  </div>
+          <button id="filter-update-button" class="action-button">Update</button>
+        </aside>
+      </div>
 
 
 <div class = "blog-portion">
