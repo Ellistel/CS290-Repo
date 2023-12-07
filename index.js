@@ -1,6 +1,6 @@
-var PostArray = document.getElementsByClassName("blog-post-container");
-var PostCopy = [...PostArray];
-var ParentPost = document.querySelector(".blog-container");
+var PostArray = document.getElementsByClassName("blog-post-container")
+var PostCopy = [...PostArray]
+var ParentPost = document.querySelector(".blog-container")
 
 function FilterWebpage(IndexArray) {
     while (ParentPost.firstChild) {
@@ -9,7 +9,7 @@ function FilterWebpage(IndexArray) {
 
     for (var i = 0; i < IndexArray.length; i++) {
         if (IndexArray[i] != 'X') {
-            ParentPost.appendChild(PostCopy[i]);
+            ParentPost.appendChild(PostCopy[i])
         }
     }
 }
@@ -20,53 +20,64 @@ function RestoreWebpage() {
     }
 
     for (var i = 0; i < PostCopy.length; i++) {
-        ParentPost.appendChild(PostCopy[i]);
+        ParentPost.appendChild(PostCopy[i])
     }
 }
+var filterClick = document.getElementById("filter-update-button")
+console.log(filterClick)
 
-var filterClick = document.getElementById("filter-update-button");
+
+
+
+if(filterClick)
+{
 filterClick.addEventListener("click", function () {
-    var text = document.getElementById("filter-text").value;
+    var text = document.getElementById("filter-text").value
 
     if (text == "") {
-        console.log("PostCopy:", PostCopy);
-        console.log("ParentCopy:", ParentPost);
-        RestoreWebpage();
-        CancelExit();
+        console.log("PostCopy:", PostCopy)
+        console.log("ParentCopy:", ParentPost)
+        RestoreWebpage()
+        CancelExit()
     }
 
-    var TestArray = FindIndex(text);
-    FilterWebpage(TestArray);
-});
+    var TestArray = FindIndex(text)
+    FilterWebpage(TestArray)
+})
 
 function FindIndex(text) {
-    var IndexArray = [];
-    IndexArray.length = PostCopy.length;
-    var title;
+    var IndexArray = []
+    IndexArray.length = PostCopy.length
+    var title
 
     for (var i = 0; i < PostCopy.length; i++) {
-        title = PostCopy[i].querySelector(".blog-post-title h2").innerText;
+        title = PostCopy[i].querySelector(".blog-post-title h2").innerText
 
         if (title.toLowerCase().includes(text.toLowerCase())) {
-            IndexArray[i] = i;
+            IndexArray[i] = i
         } else if (text != '') {
-            IndexArray[i] = 'X';
+            IndexArray[i] = 'X'
         }
     }
 
-    return IndexArray;
+    return IndexArray
+}
 }
 
 function toggleModal() {
-    var modal = document.getElementById("draft-post-modal");
-    var modalBackdrop = document.getElementById("modal-backdrop");
-
-    modal.classList.toggle("hidden");
-    modalBackdrop.classList.toggle("hidden");
+    var modal = document.getElementById("draft-post-modal")
+    var modalBackdrop = document.getElementById("modal-backdrop")
+    console.log("dasdasdas")
+    modal.classList.toggle("hidden")
+    modalBackdrop.classList.toggle("hidden")
 }
 
-var draftPostbutton = document.getElementById("draft-button");
-draftPostbutton.addEventListener("click", toggleModal);
 
-var closePost = document.getElementById("c-b");
-closePost.addEventListener("click", toggleModal);
+var draftPostbutton = document.getElementById("draft-button")
+if(draftPostbutton)
+{
+draftPostbutton.addEventListener("click", toggleModal)
+
+var closePost = document.getElementById("c-b")
+closePost.addEventListener("click", toggleModal)
+}
