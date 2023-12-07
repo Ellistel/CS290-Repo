@@ -318,3 +318,36 @@ header a {
 {
   display: none;
 }
+
+.new-post-button {
+font-family: Ariel;
+font-weight: 0;
+font-size: 14px;
+color: black;
+background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
+padding: 10px 30px;
+border: none;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+position: absolute;
+bottom: 0;
+right: 0;
+margin: 10px;
+}
+
+
+.new-post-button:hover {
+  transition : 1000ms;
+  padding: 10px 13px;
+  transform : translateY(-0px);
+  background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
+  color: #000000;
+  border: solid 2px #000000;
+}
+
