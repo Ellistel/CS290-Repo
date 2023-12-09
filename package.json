@@ -6,7 +6,10 @@
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node server.js",
-      "dev": "nodemon server.js"
+      "prestart": "npm run build",
+      "build": "handlebars views/partials/commentTemplate.handlebars -f static/commentTemplate.js",
+      "dev": "nodemon server.js",
+      "predev": "npm run build"
     },
     "dependencies": {
       "express": "^4.18.2",
