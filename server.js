@@ -3,8 +3,6 @@ var path = require('path')
 var express = require('express')
 var exphbs = require ("express-handlebars")
 var fs = require('fs');
-var commentData = require("./commentData.json")
-var blogData = require("./blogpostData.json");
 const e = require('express');
 serverData = require("./serverData.json")
 
