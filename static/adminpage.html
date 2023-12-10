@@ -31,17 +31,17 @@
   <div class = alignment>
     <div id="draft-post-modal" class="hidden">
       <button type="submit" class = "close-button" id = "c-b">Close</button>
-        <form action="/create-post" method="post" enctype="multipart/form-data">
+        <form>
             <label for="postTitle">Title:</label>
             <input type="text" id="postTitle" name="postTitle" required>
 
             <label for="postContent">Content:</label>
             <textarea id="postContent" name="postContent" required></textarea>
 
-            <label for="postImage">Upload Image:</label>
-            <input type="file" id="postImage" name="postImage" accept="image/*">
+            <label for="postImage">Image URL:</label>
+            <input type="text" id="postImage" name="postImage" placeholder="Enter Image URL">
 
-            <button type="submit">Submit Post</button>
+            <button id ="submitBlog" type="submit">Submit Post</button>
         </form>
     </div>
   </div>

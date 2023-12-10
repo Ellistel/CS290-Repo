@@ -26,6 +26,57 @@ function RestoreWebpage() {
 var filterClick = document.getElementById("filter-update-button")
 
 
+
+
+var postBlog = document.getElementById("submitBlog");
+
+if (postBlog) {
+    postBlog.addEventListener("click", function () {
+        console.log("Event listener triggered!");
+        var title = document.getElementById("postTitle").value;
+        var content = document.getElementById("postContent").value;
+        var URL = document.getElementById("postImage").value;
+        if (!title || !content || !URL) {
+            alert("You must fill out all fields");
+        } else {
+            var postId = getPostNumberFromURL();
+            var promise = fetch("/adminpage.html/addBlog", {
+                method: "POST",
+                body: JSON.stringify({
+                    title: title,
+                    content: content,
+                    photoURL: URL,
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            promise.then(function (res) {
+                if (res.status !== 200) {
+                    alert("An error occurred");
+                }
+            });
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var postComment = document.getElementById("comment-submit-button")
 
 function getPostNumberFromURL()

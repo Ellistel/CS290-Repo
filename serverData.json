@@ -3,7 +3,7 @@
     "title": "Blog #1",
     "content": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/140",
-    "link-to-post": "1",
+    "linktopost": "1",
     "comments": [
       {
         "username": "John Doe",
@@ -16,7 +16,7 @@
     "title": "Blog #2",
     "content": "Content for Blog #2",
     "photoURL": "http://placekitten.com/230/150",
-    "link-to-post": "2",
+    "linktopost": "2",
     "comments": [
       {
         "username": "Fuzziemann",
@@ -29,12 +29,17 @@
     "title": "Blog #3",
     "content": "Content for Blog #3",
     "photoURL": "http://placekitten.com/230/146",
-    "link-to-post": "3",
+    "linktopost": "3",
     "comments": [
       {
         "username": "Unregistered Flex Offender",
         "timestamp": "YYYY-MM-DD HH",
         "content": "Amazin'"
+      },
+      {
+        "username": "USERNAME HERE",
+        "content": "dsaadw",
+        "timestamp": "12-10-2023"
       }
     ]
   }

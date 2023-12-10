@@ -50,6 +50,47 @@ app.get("/:postnumber", function (req, res, next) {
         next()
 })
 
+app.post('/adminpage.html/addBlog', function(req,res,next){
+console.log(req.body)
+
+if(req.body && req.body.title && req.body.content && req.body.photoURL)
+{
+var keysArray = Object.keys(serverData)
+serverData.push({
+    title: req.body.title,
+    content: req.body.content,
+    photoURL: req.body.photoURL,
+    linktopost: keysArray.length + 1,
+    comments: [{}],
+
+
+
+
+})
+
+ fs.writeFile("./serverData.json",
+                JSON.stringify(serverData, null, 2), function (err) {
+
+                    if (err) {
+
+                        res.status(500).send("server-side error")
+                    } else {
+                        res.status(200).send("Comment successfully added")
+                    }
+
+                })
+
+            }
+            else {
+
+                res.status(400).send("Request needs to contain a json body with a username and content fields")
+            }
+            
+
+}
+)
+
+
 app.post('/:postnumber/addComment', function (req, res, next) {
     console.log(req.body)
     var number = req.params.postnumber
