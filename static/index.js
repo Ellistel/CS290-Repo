@@ -24,9 +24,63 @@ function RestoreWebpage() {
     }
 }
 var filterClick = document.getElementById("filter-update-button")
-console.log(filterClick)
 
 
+var postComment = document.getElementById("comment-submit-button")
+
+function getPostNumberFromURL()
+{
+    var path = window.location.pathname
+    var pathParts = path.split('/')
+    return pathParts[1]
+}
+
+
+if(postComment)
+{
+
+    postComment.addEventListener("click",function(event)
+    
+    {
+        console.log("Event listener triggered!")
+        var comment = document.getElementById("postContent").value
+        var name = document.getElementById("theUsername").textContent
+        console.log("USERNAME: ", username)
+        if(!comment)
+        {
+        alert("you must fill out content field")
+        }
+        else
+        {
+            var postId = getPostNumberFromURL()
+           var promise = fetch("/" + postId + "/addComment",
+                {method: "POST",
+                body: JSON.stringify({
+                    username: name,
+                    content: comment
+                }), headers:{
+                    "Content-Type": "application/json"
+                }}
+            )
+            promise.then(function(res){
+
+                if(res.status!==200)
+                {
+                    alert("am error occured")
+                }
+            })
+        }
+
+
+    }
+    
+    
+    )
+
+
+
+
+}
 
 
 if(filterClick)

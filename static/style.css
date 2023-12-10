@@ -351,3 +351,8 @@ margin: 10px;
   border: solid 2px #000000;
 }
 
+.user-info {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
