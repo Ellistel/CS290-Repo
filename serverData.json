@@ -4,6 +4,7 @@
     "content": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/140",
     "linktopost": "1",
+    "timestamp": "YYYY-MM-DD HH",
     "comments": [
       {
         "username": "John Doe",
@@ -17,6 +18,7 @@
     "content": "Content for Blog #2",
     "photoURL": "http://placekitten.com/230/150",
     "linktopost": "2",
+    "timestamp": "YYYY-MM-DD HH",
     "comments": [
       {
         "username": "Fuzziemann",
@@ -30,6 +32,7 @@
     "content": "Content for Blog #3",
     "photoURL": "http://placekitten.com/230/146",
     "linktopost": "3",
+    "timestamp": "YYYY-MM-DD HH",
     "comments": [
       {
         "username": "Unregistered Flex Offender",

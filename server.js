@@ -55,12 +55,18 @@ console.log(req.body)
 
 if(req.body && req.body.title && req.body.content && req.body.photoURL)
 {
+    var timestamp = req.timestamp
+            timestamp = timestamp.toISOString()
+            var truncatedTimestamp = timestamp.split('T')[0]
+            var parts = truncatedTimestamp.split('-')
+            const reformattedTimestamp = `${parts[1]}-${parts[2]}-${parts[0]}`
 var keysArray = Object.keys(serverData)
 serverData.push({
     title: req.body.title,
     content: req.body.content,
     photoURL: req.body.photoURL,
     linktopost: keysArray.length + 1,
+    timestamp: reformattedTimestamp,
     comments: [{}],
 
 
