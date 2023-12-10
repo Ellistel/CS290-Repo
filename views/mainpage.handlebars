@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog Website Title Placeholder</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" charset="utf-8" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+   
+  </head>
+  
+  <body>
+    <header>
+      <div class="header-image-container">
+        <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      </div>
+
+      <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
+    </header>
+
+    <div class="login-container">
+      <div class="credentials">
+        <form action="/login" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <div class="sign-up">
+        <p id="sign-up-link">Don't have an account? <a href="/signup">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div class="site-content">
+      <div class="filter-portion">
+        <div class="filter-container-title">
+          <h2>Filters</h2>
+        </div>
+
+        <aside class="filter-container">
+          <div class="filter-input-container">
+            <label for="filter-text" class="filter-input-label">Text</label>
+            <div class="filter-input-element">
+              <input type="text" name="filter-text" id="filter-text" class="filter-input">
+            </div>
+          </div>
+
+          <fieldset class="radio-button-filter-fieldset">
+            <label>
+              <input type="radio" name="filter" value="all" checked> All
+            </label>
+
+            <label>
+              <input type="radio" name="filter" value="today"> Today
+            </label>
+
+            <label>
+              <input type="radio" name="filter" value="this-week"> This Week
+            </label>
+
+            <label>
+              <input type="radio" name="filter" value="this-month"> This Month
+            </label>
+          </fieldset>
+          
+          <button id="filter-update-button" class="action-button">Update</button>
+     
+        </aside>
+      </div>
+
+
+<div class = "blog-portion">
+  <div class= "blog-title">
+    <h2>Blogs:</h2>
+  </div>
+<div class = "blog-container ">
+
+    {{#each posts}}
+    {{> blogpostTemplate}}
+    {{/each}}
+
+
+
+
+  </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+<button class="new-post-button">New Post</button>
+
+
+
+    
+  </body>
+</html>

@@ -40,19 +40,9 @@
     </div>
 
     <div class="main-blog-post-container">
-      <div class="main-blog-post">
-        <div class="main-blog-post-title">
-          <h2>Title for blog</h2>
-        </div>
-
-        <div class="main-post-image">
-          <img src="http://placekitten.com/200/120" alt="Blog_Post_Photo">
-        </div>
-        
-        <div class="main-post-contents">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra magna ac placerat vestibulum lectus. Nisl rhoncus mattis rhoncus urna neque. Semper viverra nam libero justo. Facilisis gravida neque convallis a cras semper auctor neque. Amet porttitor eget dolor morbi non. Maecenas pharetra convallis posuere morbi leo urna molestie. Ipsum faucibus vitae aliquet nec ullamcorper...</p>
-        </div>
-      </div>
+        {{#each posts}}
+      {{>expandedblogpostTemplate}}
+       {{/each}}
     </div>
 
     <div class="comments-section-title">
@@ -70,7 +60,7 @@
 
     <div class="comment-container">
       
-    {{#each posts}}
+    {{#each comments}}
     {{> commentTemplate}}
     {{/each}}
 
