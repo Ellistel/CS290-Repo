@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog Website Title Placeholder</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="index.js" charset="utf-8" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
+  </head>
+  
+  <body>
+    <header>
+      <div class="header-image-container">
+        <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      </div>
+
+      <h1 class="site-title"><a href="#">Blog Site Name placeholder</a></h1>
+    </header>
+
+    <div class="login-container">
+      <div class="credentials">
+        <form action="/login" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <div class="sign-up">
+        <p id="sign-up-link">Don't have an account? <a href="/signup">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div class="main-blog-post-container">
+      <div class="main-blog-post">
+        <div class="main-blog-post-title">
+          <h2>Title for blog</h2>
+        </div>
+
+        <div class="main-post-image">
+          <img src="http://placekitten.com/200/120" alt="Blog_Post_Photo">
+        </div>
+        
+        <div class="main-post-contents">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra magna ac placerat vestibulum lectus. Nisl rhoncus mattis rhoncus urna neque. Semper viverra nam libero justo. Facilisis gravida neque convallis a cras semper auctor neque. Amet porttitor eget dolor morbi non. Maecenas pharetra convallis posuere morbi leo urna molestie. Ipsum faucibus vitae aliquet nec ullamcorper...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="comments-section-title">
+      <h2>Comments Section</h2>
+    </div>
+
+    <div class="comment-post-container">
+      <form action="/create-comment" method="post" enctype="multipart/form-data">
+        <p>Logged in as: USERNAME HERE</p>
+        <label for="postContent">Leave a comment:</label>
+        <textarea id="postContent" name="postContent" required></textarea>
+        <button type="submit">Submit Comment</button>
+      </form>
+    </div>
+
+    <div class="comment-container">
+      
+    {{#each posts}}
+    {{> commentTemplate}}
+    {{/each}}
+
+
+
+    </div>
+  </body>
+</html>
