@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Blog #1",
+        "content": "Content for Blog #1",
+        "photoURL": "http://placekitten.com/230/140",
+        "link-to-post": "1",
+        "comments": [
+            {
+                "username": "John Doe",
+                "timestamp": "YYYY-MM-DD HH",
+                "content": "I hated this with every fiber of my being"
+            }
+        
+        ]
+    },
+
+
+    {
+        "title": "Blog #2",
+        "content": "Content for Blog #2",
+        "photoURL": "http://placekitten.com/230/150",
+        "link-to-post": "2",
+        "comments": [
+        
+            {
+                "username": "Fuzziemann",
+                "timestamp": "YYYY-MM-DD HH",
+                "content": "I love cats"
+            }
+        ]
+    },
+
+{
+        "title": "Blog #3",
+        "content": "Content for Blog #3",
+        "photoURL": "http://placekitten.com/230/146",
+        "link-to-post": "3",
+        "comments": [
+            
+            {
+                "username": "Unregistered Flex Offender",
+                "timestamp": "YYYY-MM-DD HH",
+                "content": "Amazin'"
+            }
+        ]
+    }
+
+
+]
+
