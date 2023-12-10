@@ -95,9 +95,9 @@ if(postComment)
     {
         console.log("Event listener triggered!")
         var comment = document.getElementById("postContent").value
-        var name = document.getElementById("theUsername").textContent
+        var name = document.getElementById("selectUsername").value
         console.log("USERNAME: ", username)
-        if(!comment)
+        if(!comment || !name)
         {
         alert("you must fill out content field")
         }
