@@ -6,7 +6,7 @@ html body {
 }
 
 header {
-  background-color: #90EE90;
+  background-color: #4caf50;
   display: flex;
   align-items: center;
   position: relative;
@@ -14,20 +14,28 @@ header {
 }
 
 header a {
-  color: #fffdd0;
+  color: rgb(0, 2, 14);
   text-decoration: none;
   position: absolute;
   left: 5px;
-  bottom: 65px;
-  border: 2px solid bisque;
+  bottom: 35px;
+  border: 2px solid #4caf50;
   padding-right: 5px;
   padding-left: 5px;
+  font-size: 45px; 
+  color: #fff; 
 }
 
 .header-image-container {
   padding-left: 500px;
   position: absolute; 
   right: 5px;
+}
+
+.site-title {
+  font-size: 45px; 
+  color: #fff; 
+  text-decoration: none; 
 }
 
 .alignment{
@@ -320,7 +328,7 @@ header a {
 }
 
 .new-post-button {
-font-family: Ariel;
+font-family: 'Arial', sans-serif;
 font-weight: 0;
 font-size: 14px;
 color: black;
@@ -343,7 +351,7 @@ margin: 10px;
 
 
 .new-post-button:hover {
-  transition : 1000ms;
+  transition : 0.3s;
   padding: 10px 13px;
   transform : translateY(-0px);
   background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
