@@ -1,6 +1,42 @@
-var PostArray = document.getElementsByClassName("blog-post-container")
-var PostCopy = [...PostArray]
-var ParentPost = document.querySelector(".blog-container")
+document.addEventListener("DOMContentLoaded", function () {
+
+    var PostArray = document.getElementsByClassName("blog-post-container");
+    var PostCopy = [...PostArray];
+    var ParentPost = document.querySelector(".blog-container");
+    var postBlogButton = document.querySelector(".new-post-button");
+    var modal = document.getElementById("draft-post-modal");
+    var closeModalBtn = document.getElementById("c-b");
+    var modalBackdrop = document.getElementById("modal-backdrop");
+    var submitPostButton = document.getElementById("submit-post");
+  
+    // open modal
+    const openModal = function () {
+      modal.classList.remove("hidden");
+      modalBackdrop.classList.remove("hidden");
+    };
+  
+    // close modal
+    const closeModal = function () {
+      modal.classList.add("hidden");
+      modalBackdrop.classList.add("hidden");
+    };
+  
+    // new post event listener
+    if (postBlogButton) {
+      postBlogButton.addEventListener("click", openModal);
+    }
+  
+    // submit button event listener (inside modal)
+    if (submitPostButton) {
+      submitPostButton.addEventListener("click", function () {
+        closeModal(); 
+      });
+    }
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", closeModal);
+    }
+  
 
 //function to filter and display blog posts
 function FilterWebpage(IndexArray) {
@@ -195,11 +231,21 @@ function toggleModal() {
 }
 
 
-var draftPostbutton = document.getElementById("draft-button")
-if(draftPostbutton)
-{
-draftPostbutton.addEventListener("click", toggleModal)
+/*function toggleModal() {
+    var modal = document.getElementById("draft-post-modal");
+    var modalBackdrop = document.getElementById("modal-backdrop");
+    modal.classList.toggle("hidden");
+    modalBackdrop.classList.toggle("hidden");
+  }
 
-var closePost = document.getElementById("c-b")
-closePost.addEventListener("click", toggleModal)
+  var draftPostbutton = document.getElementById("draft-button");
+  if (draftPostbutton) {
+    draftPostbutton.addEventListener("click", toggleModal);
+  }
+
+  var closePost = document.getElementById("c-b");
+  if (closePost) {
+    closePost.addEventListener("click", toggleModal);
 }
+})*/
+})
