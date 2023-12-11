@@ -2,6 +2,7 @@ var PostArray = document.getElementsByClassName("blog-post-container")
 var PostCopy = [...PostArray]
 var ParentPost = document.querySelector(".blog-container")
 
+//function to filter and display blog posts
 function FilterWebpage(IndexArray) {
     while (ParentPost.firstChild) {
         ParentPost.removeChild(ParentPost.firstChild);
@@ -13,7 +14,7 @@ function FilterWebpage(IndexArray) {
         }
     }
 }
-
+//filter to restore web page
 function RestoreWebpage() {
     while (ParentPost.firstChild) {
         ParentPost.removeChild(ParentPost.firstChild);
@@ -23,9 +24,25 @@ function RestoreWebpage() {
         ParentPost.appendChild(PostCopy[i])
     }
 }
-var filterClick = document.getElementById("filter-update-button")
+var filterUpdateButton = document.getElementById("filter-update-button")
 
+if (filterUpdateButton) {
+    filterUpdateButton.addEventListener("click", function () {
+        // Get filter criteria from various input fields
+        var textFilter = document.getElementById("filter-text").value.toLowerCase();
+        var dateFilter = document.querySelector('input[name="filter"]:checked').value;
 
+        // actual logic to determine the filter criteria
+        var filterCriteria = {
+            text: textFilter,
+            date: dateFilter,
+            // may need more
+        };
+
+        // imlement this....
+        applyFiltersAndDisplayPosts(filterCriteria);
+    });
+}
 
 
 var postBlog = document.getElementById("submitBlog");
