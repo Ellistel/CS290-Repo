@@ -235,19 +235,77 @@ if(filterClick)
 {
 filterClick.addEventListener("click", function () {
     var text = document.getElementById("filter-text").value
+    var radiobuttons =  document.getElementsByName("filter")
+    var date
 
-    if (text == "") {
+    for(var i =0; i<4; i++)
+    {
+        if(radiobuttons[i].checked)
+            date = radiobuttons[i].value
+    }
+    console.log("Date:", date)
+
+    if (text == "" && date == "all") {
         console.log("PostCopy:", PostCopy)
         console.log("ParentCopy:", ParentPost)
         RestoreWebpage()
         CancelExit()
     }
 
-    var TestArray = FindIndex(text)
+    var TestArray = FindIndex(text,date)
     FilterWebpage(TestArray)
 })
 
-function FindIndex(text) {
+
+
+
+function convertStringMonthToNumber(strMonth) {
+    // Convert the input string to lowercase for case-insensitivity
+    var lowerCaseMonth = strMonth.toLowerCase();
+  
+    // Define an object to map string months to numeric values
+    var monthMap = {
+      jan: 1,
+      feb: 2,
+      mar: 3,
+      apr: 4,
+      may: 5,
+      jun: 6,
+      jul: 7,
+      aug: 8,
+      sep: 9,
+      oct: 10,
+      nov: 11,
+      dec: 12
+    };
+  
+    // Check if the input month is a valid key in the monthMap
+    if (lowerCaseMonth in monthMap) {
+      // Return the corresponding numeric value
+      return monthMap[lowerCaseMonth];
+    } else {
+      // If the input is not a valid month, return an error value or handle accordingly
+      return -1; // Or you can return null, undefined, throw an error, etc.
+    }
+  }
+
+
+
+
+function FindIndex(text,date) {
+
+
+    var currentDate = new Date()
+    console.log(currentDate)
+    dateString = currentDate.toDateString()
+    var words = dateString.split(/\s+/)
+    var month = convertStringMonthToNumber(words[1])
+    console.log("DWADWA:", month)
+    
+    var day = words[2]
+    var year = words[3]
+
+
     var IndexArray = []
     IndexArray.length = PostCopy.length
     var title
@@ -260,6 +318,43 @@ function FindIndex(text) {
         } else if (text != '') {
             IndexArray[i] = 'X'
         }
+
+        if(IndexArray[i] != 'X' && date != "all")
+        {
+
+        var timestamp = PostCopy[i].getAttribute("data-time")
+
+        timestamp = timestamp.trim();
+        var split_timestamp = timestamp.split('-')
+        var postDay = split_timestamp[0]
+        var postMonth = split_timestamp[1]
+        var postYear = split_timestamp[2]
+
+        console.log("postDay", postDay)
+        console.log("postMonth", postMonth)
+        console.log("postYear", postYear)
+
+    
+            if(date == "today")
+            {
+                if(!(day == postDay && year == postYear && month == postMonth ))
+                    IndexArray[i] = 'X'
+
+            }
+            else if(date == "this-week")
+            {
+                
+            }
+            else if(date == "this-month")
+            {
+                
+            }
+        }
+
+
+
+
+
     }
 
     return IndexArray

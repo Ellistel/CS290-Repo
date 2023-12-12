@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
     next()
 })
 
-app.get("/testmain", function (req, res, next) {
+app.get(["/testmain", "/main", "/"], function (req, res, next) {
     console.log("serverData", serverData)
     res.status(200).render("mainpage", {
         posts: serverData,

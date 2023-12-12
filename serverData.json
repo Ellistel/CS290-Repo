@@ -5,7 +5,7 @@
     "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/140",
     "linktopost": "1",
-    "timestamp": "YYYY-MM-DD HH",
+    "timestamp": "12-12-2023",
     "comments": []
   },
   {
@@ -14,7 +14,7 @@
     "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/150",
     "linktopost": "2",
-    "timestamp": "YYYY-MM-DD HH",
+    "timestamp": "12-8-2023",
     "comments": [
       {
         "username": "Fuzziemann",
@@ -29,7 +29,7 @@
     "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/146",
     "linktopost": "3",
-    "timestamp": "YYYY-MM-DD HH",
+    "timestamp": "10-9-2003",
     "comments": [
       {
         "username": "Unregistered Flex Offender",
