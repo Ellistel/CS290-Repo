@@ -302,13 +302,12 @@ function convertStringMonthToNumber(strMonth) {
 function FindIndex(text,date) {
 
 
+    //getting the current date to compare to post dates
     var currentDate = new Date()
     console.log(currentDate)
     dateString = currentDate.toDateString()
     var words = dateString.split(' ')
     var month = convertStringMonthToNumber(words[1])
-    console.log("DWADWA:", month)
-    
     var day = parseInt(words[2])
     var year = parseInt(words[3])
 
@@ -316,20 +315,22 @@ function FindIndex(text,date) {
     var IndexArray = []
     IndexArray.length = PostCopy.length
     var title
-
+    //Iterate through each blog post to check if it meets filter conditions
     for (var i = 0; i < PostCopy.length; i++) {
 
         title = PostCopy[i].querySelector(".blog-post-title h2").innerText
-
+        //Checking ig the text matches
         if (title.toLowerCase().includes(text.toLowerCase())) {
             IndexArray[i] = i
         } else if (text != '') {
             IndexArray[i] = 'X'
         }
 
+        //checking if dates match
         if(IndexArray[i] != 'X' && date != "all")
         {
 
+        //getting the dates for each post
         var timestamp = PostCopy[i].getAttribute("data-time")
         timestamp = timestamp.trim();
         var split_timestamp = timestamp.split('-')
@@ -337,17 +338,14 @@ function FindIndex(text,date) {
         var postMonth = parseInt(split_timestamp[0])
         var postYear = parseInt(split_timestamp[2])
 
-        console.log("postDay", postDay)
-        console.log("postMonth", postMonth)
-        console.log("postYear", postYear)
-
-    
+        //comparing dates to see if post was made today
             if(date == "today")
             {
                 if(!(day == postDay && year == postYear && month == postMonth ))
                     IndexArray[i] = 'X'
 
             }
+            //comparing posts to see if post was made this week
             else if(date == "this-week")
             {
                if(postMonth == month && postYear == year)
@@ -355,17 +353,13 @@ function FindIndex(text,date) {
                 if(!(Math.abs(day - postDay) < 7))
                     IndexArray[i] = 'X'
                }
-
-
                else if(Math.abs(postMonth - month) == 1 && postYear == year || Math.abs(postMonth - month) == 11 && Math.abs(postYear - year) == 1)
                 {
-                
                     if(postDay > day)   
                         var daysinmonth = getdaysinmonth(postMonth)
 
                     else
                         var daysinmonth = getdaysinmonth(month)
-
 
                     var valtomod = parseInt(postDay) + parseInt(day)
                     console.log(valtomod)
@@ -375,29 +369,21 @@ function FindIndex(text,date) {
                        IndexArray[i] = 'X'
                    }
 
-
                 }
                 else
                 {
                     IndexArray[i] = 'X'
                 }
-
-
-
             }
+            //comparing if date of blog matches current month
             else if(date == "this-month")
             {
                 if(!(month == postMonth && postYear == year))
                     IndexArray[i] = 'X'
             }
         }
-
-
-
-
-
     }
-
+    //returning array
     return IndexArray
 }
 }
