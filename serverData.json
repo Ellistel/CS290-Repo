@@ -2,6 +2,7 @@
   {
     "title": "Blog #1",
     "content": "Content for Blog #1",
+    "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/140",
     "linktopost": "1",
     "timestamp": "YYYY-MM-DD HH",
@@ -10,12 +11,18 @@
         "username": "John Doe",
         "timestamp": "YYYY-MM-DD HH",
         "content": "I hated this with every fiber of my being"
+      },
+      {
+        "username": "dwaadw",
+        "content": "wdaawd",
+        "timestamp": "12-12-2023"
       }
     ]
   },
   {
     "title": "Blog #2",
     "content": "Content for Blog #2",
+    "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/150",
     "linktopost": "2",
     "timestamp": "YYYY-MM-DD HH",
@@ -30,6 +37,7 @@
   {
     "title": "Blog #3",
     "content": "Content for Blog #3",
+    "shortContent": "Content for Blog #1",
     "photoURL": "http://placekitten.com/230/146",
     "linktopost": "3",
     "timestamp": "YYYY-MM-DD HH",
@@ -44,6 +52,17 @@
         "content": "dsaadw",
         "timestamp": "12-10-2023"
       }
+    ]
+  },
+  {
+    "title": "BLog #4",
+    "content": "dwafawjlflwafawlkfjwalkjawkjwasljwaskfjswlafjskafjlaskjwalfjwalkfsjalfjklsjalkwfjklsjadwfkjsalkwjflksjawfwsawfswafwasfwsas",
+    "shortContent": "dwafawjlflwafawlkfjw...",
+    "photoURL": "http://placekitten.com/200/300",
+    "linktopost": 4,
+    "timestamp": "12-12-2023",
+    "comments": [
+      {}
     ]
   }
 ]

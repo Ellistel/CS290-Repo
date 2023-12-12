@@ -120,6 +120,50 @@ if (postBlog) {
 
 
 
+var makeBlog = document.getElementById("submit-post");
+
+if (makeBlog) {
+    makeBlog.addEventListener("click", function () {
+        console.log("Event listener triggered!")
+        var title = document.getElementById("post-title").value
+        var content = document.getElementById("post-content").value
+        var URL = document.getElementById("post-image-url").value
+        if (!title || !content || !URL) {
+            alert("You must fill out all fields");
+        } else {
+            var promise = fetch("/testmain", {
+                method: "POST",
+                body: JSON.stringify({
+                    title: title,
+                    content: content,
+                    photoURL: URL,
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            promise.then(function (res) {
+                if (res.status !== 200) {
+                    alert("An error occurred");
+                }
+            })
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,7 +230,7 @@ if(postComment)
 
 }
 
-
+var filterClick = document.getElementById("filter-update-button")
 if(filterClick)
 {
 filterClick.addEventListener("click", function () {

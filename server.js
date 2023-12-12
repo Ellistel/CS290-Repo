@@ -74,7 +74,7 @@ serverData.push({
 
 })
 
- fs.writeFile("./serverData.json",
+fs.writeFile("./serverData.json",
                 JSON.stringify(serverData, null, 2), function (err) {
 
                     if (err) {
@@ -96,6 +96,59 @@ serverData.push({
 }
 )
 
+app.post('/testmain', function(req,res,next){
+    console.log(req.body)
+    
+    if(req.body && req.body.title && req.body.content && req.body.photoURL)
+    {
+        var timestamp = req.timestamp
+                timestamp = timestamp.toISOString()
+                var truncatedTimestamp = timestamp.split('T')[0]
+                var parts = truncatedTimestamp.split('-')
+                const reformattedTimestamp = `${parts[1]}-${parts[2]}-${parts[0]}`
+    var keysArray = Object.keys(serverData)
+    if(req.body.content.length >20)
+    {    
+
+    var ShortContent = req.body.content.slice(0,20) + '...'
+
+
+    }
+    serverData.push({
+        title: req.body.title,
+        content: req.body.content,
+        shortContent: ShortContent,
+        photoURL: req.body.photoURL,
+        linktopost: keysArray.length + 1,
+        timestamp: reformattedTimestamp,
+        comments: [{}],
+    
+    
+    
+    
+    })
+    
+    fs.writeFile("./serverData.json",
+                    JSON.stringify(serverData, null, 2), function (err) {
+    
+                        if (err) {
+    
+                            res.status(500).send("server-side error")
+                        } else {
+                            res.status(200).send("Comment successfully added")
+                        }
+    
+                    })
+    
+                }
+                else {
+    
+                    res.status(400).send("Request needs to contain a json body with a username and content fields")
+                }
+                
+    
+    }
+    )
 
 app.post('/:postnumber/addComment', function (req, res, next) {
     console.log(req.body)
