@@ -81,15 +81,14 @@ header a {
   max-width: 500px;
   width: 350px;
 }
+
+
 .login-container{
-  border-bottom: 2px solid bisque;
-  border-top: 2px solid bisque;
-  padding-top: 5px;
+  border: 2px solid bisque;
+  padding-top: 10px;
   padding-left: 5px;
   display:flex;
   flex-direction: column;
-  
-
 }
 
 .sign-up{
@@ -101,7 +100,6 @@ header a {
 {
   text-decoration: underline;
 }
-
 
 
 .option-buttons{
@@ -116,20 +114,40 @@ header a {
 }
 
 .credentials{
-
   display: flex;
   justify-content: flex-start;
-  padding-top: 7px;
+  padding-top: 10px;
   padding-bottom: 7px;
   padding-left: 15px;
-
+  margin-bottom: 10px;
 }
 
 
-.credentials label,
+.credentials label{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 .credentials input {
-  margin: 10px; 
+  margin-right: 10px; 
 }
+
+.credentials input[type="submit"] {
+  background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
+  color: white; 
+  padding: 5px 10px; 
+  border: 1px solid white;
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.credentials input[type="submit"]:hover {
+  background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
+  color: #000000;
+  border: solid 1px #000000;
+}
+
+
 
  .filter-container {
   background-color: #f4f4f4;
@@ -304,7 +322,6 @@ header a {
 }
 
 .username-field{
-
   margin-right: 15px;
 }
 
@@ -334,7 +351,7 @@ header a {
 font-family: 'Arial', sans-serif;
 font-weight: 0;
 font-size: 14px;
-color: black;
+color: white;
 background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
 padding: 10px 30px;
 border: none;
@@ -346,7 +363,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 cursor: pointer;
-position: absolute;
+position: fixed;
 bottom: 0;
 right: 0;
 margin: 10px;
