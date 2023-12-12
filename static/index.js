@@ -298,7 +298,7 @@ function FindIndex(text,date) {
     var currentDate = new Date()
     console.log(currentDate)
     dateString = currentDate.toDateString()
-    var words = dateString.split(/\s+/)
+    var words = dateString.split(' ')
     var month = convertStringMonthToNumber(words[1])
     console.log("DWADWA:", month)
     
@@ -323,11 +323,10 @@ function FindIndex(text,date) {
         {
 
         var timestamp = PostCopy[i].getAttribute("data-time")
-
         timestamp = timestamp.trim();
         var split_timestamp = timestamp.split('-')
-        var postDay = split_timestamp[0]
-        var postMonth = split_timestamp[1]
+        var postDay = split_timestamp[1]
+        var postMonth = split_timestamp[0]
         var postYear = split_timestamp[2]
 
         console.log("postDay", postDay)
@@ -343,11 +342,13 @@ function FindIndex(text,date) {
             }
             else if(date == "this-week")
             {
+
                 
             }
             else if(date == "this-month")
             {
-                
+                if(!(month == postMonth && postYear == year))
+                    IndexArray[i] = 'X'
             }
         }
 
