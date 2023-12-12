@@ -296,6 +296,7 @@ header a {
 
 .main-post-contents {
   text-align: justify;
+  max-width: 650px;
 }
 .comment-container{
   display: flex;
@@ -307,7 +308,7 @@ header a {
   flex-direction: column;
   border: 1px solid #ddd;
   margin: 15px;
-  width: 750px
+  width: 740px
 
 }
 
@@ -319,6 +320,7 @@ header a {
 
 .comment-content{
   margin-left:20px;
+  max-width: 750px;
 }
 
 .username-field{
