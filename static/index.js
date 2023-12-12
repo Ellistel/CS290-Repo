@@ -291,6 +291,13 @@ function convertStringMonthToNumber(strMonth) {
 
 
 
+  function getdaysinmonth(month) {
+
+    var DaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+      return DaysInMonth[month -1]
+
+    }
 
 function FindIndex(text,date) {
 
@@ -302,8 +309,8 @@ function FindIndex(text,date) {
     var month = convertStringMonthToNumber(words[1])
     console.log("DWADWA:", month)
     
-    var day = words[2]
-    var year = words[3]
+    var day = parseInt(words[2])
+    var year = parseInt(words[3])
 
 
     var IndexArray = []
@@ -311,6 +318,7 @@ function FindIndex(text,date) {
     var title
 
     for (var i = 0; i < PostCopy.length; i++) {
+
         title = PostCopy[i].querySelector(".blog-post-title h2").innerText
 
         if (title.toLowerCase().includes(text.toLowerCase())) {
@@ -325,9 +333,9 @@ function FindIndex(text,date) {
         var timestamp = PostCopy[i].getAttribute("data-time")
         timestamp = timestamp.trim();
         var split_timestamp = timestamp.split('-')
-        var postDay = split_timestamp[1]
-        var postMonth = split_timestamp[0]
-        var postYear = split_timestamp[2]
+        var postDay = parseInt(split_timestamp[1])
+        var postMonth = parseInt(split_timestamp[0])
+        var postYear = parseInt(split_timestamp[2])
 
         console.log("postDay", postDay)
         console.log("postMonth", postMonth)
@@ -342,8 +350,40 @@ function FindIndex(text,date) {
             }
             else if(date == "this-week")
             {
+               if(postMonth == month && postYear == year)
+               {
+                if(!(Math.abs(day - postDay) < 7))
+                    IndexArray[i] = 'X'
+               }
 
+
+               else if(Math.abs(postMonth - month) == 1 && postYear == year || Math.abs(postMonth - month) == 11 && Math.abs(postYear - year) == 1)
+                {
                 
+                    if(postDay > day)   
+                        var daysinmonth = getdaysinmonth(postMonth)
+
+                    else
+                        var daysinmonth = getdaysinmonth(month)
+
+
+                    var valtomod = parseInt(postDay) + parseInt(day)
+                    console.log(valtomod)
+
+                   if (!(valtomod % daysinmonth < 7))
+                   {
+                       IndexArray[i] = 'X'
+                   }
+
+
+                }
+                else
+                {
+                    IndexArray[i] = 'X'
+                }
+
+
+
             }
             else if(date == "this-month")
             {
