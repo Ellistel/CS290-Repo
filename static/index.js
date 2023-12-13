@@ -237,28 +237,29 @@ filterClick.addEventListener("click", function () {
     var text = document.getElementById("filter-text").value
     var radiobuttons =  document.getElementsByName("filter")
     var date
-
+    //getting radio button that was clickjed
     for(var i =0; i<4; i++)
     {
         if(radiobuttons[i].checked)
             date = radiobuttons[i].value
     }
-    console.log("Date:", date)
-
+    
+    //if no filter conditions, skip 
     if (text == "" && date == "all") {
         console.log("PostCopy:", PostCopy)
         console.log("ParentCopy:", ParentPost)
         RestoreWebpage()
         CancelExit()
     }
-
+    //Finding Indexes that should/should not be included
     var TestArray = FindIndex(text,date)
+    //removing pages which do not match filters
     FilterWebpage(TestArray)
 })
 
 
 
-
+//Function to convert the timestamp given by JS Date function into an integer
 function convertStringMonthToNumber(strMonth) {
     // Convert the input string to lowercase for case-insensitivity
     var lowerCaseMonth = strMonth.toLowerCase();
@@ -301,7 +302,7 @@ function convertStringMonthToNumber(strMonth) {
 
 function FindIndex(text,date) {
 
-
+    
     //getting the current date to compare to post dates
     var currentDate = new Date()
     console.log(currentDate)
@@ -310,7 +311,6 @@ function FindIndex(text,date) {
     var month = convertStringMonthToNumber(words[1])
     var day = parseInt(words[2])
     var year = parseInt(words[3])
-
 
     var IndexArray = []
     IndexArray.length = PostCopy.length
@@ -338,6 +338,13 @@ function FindIndex(text,date) {
         var postMonth = parseInt(split_timestamp[0])
         var postYear = parseInt(split_timestamp[2])
 
+        var currentDate = new Date()
+        var dayOfWeek = currentDate.getDay() // 0 for Sunday, 1 for Monday, and so on
+        var startOfWeek = new Date(currentDate)
+        startOfWeek.setDate(currentDate.getDate() - dayOfWeek) // Start of the week
+        var endOfWeek = new Date(currentDate);
+        endOfWeek.setDate(currentDate.getDate() + (6 - dayOfWeek))
+            
         //comparing dates to see if post was made today
             if(date == "today")
             {
@@ -348,33 +355,15 @@ function FindIndex(text,date) {
             //comparing posts to see if post was made this week
             else if(date == "this-week")
             {
-               if(postMonth == month && postYear == year)
-               {
-                if(!(Math.abs(day - postDay) < 7))
-                    IndexArray[i] = 'X'
-               }
-               else if(Math.abs(postMonth - month) == 1 && postYear == year || Math.abs(postMonth - month) == 11 && Math.abs(postYear - year) == 1)
-                {
-                    if(postDay > day)   
-                        var daysinmonth = getdaysinmonth(postMonth)
-
-                    else
-                        var daysinmonth = getdaysinmonth(month)
-
-                    var valtomod = parseInt(postDay) + parseInt(day)
-                    console.log(valtomod)
-
-                   if (!(valtomod % daysinmonth < 7))
-                   {
-                       IndexArray[i] = 'X'
-                   }
-
-                }
-                else
-                {
-                    IndexArray[i] = 'X'
-                }
+                var timestamp = PostCopy[i].getAttribute('data-time');
+                timestamp = timestamp.trim();
+                var split_timestamp = timestamp.split('-');
+                var postDate = new Date(split_timestamp[2], split_timestamp[0] - 1, split_timestamp[1])
+    
+                if (!(postDate >= startOfWeek && postDate <= endOfWeek))
+                IndexArray[i] = 'X'
             }
+
             //comparing if date of blog matches current month
             else if(date == "this-month")
             {
