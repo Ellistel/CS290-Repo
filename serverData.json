@@ -42,48 +42,5 @@
         "timestamp": "12-10-2023"
       }
     ]
-  },
-
-
-  {
-    "title": "Blog #4",
-    "content": "Content for Blog #3",
-    "shortContent": "Content for Blog #1",
-    "photoURL": "http://placekitten.com/230/146",
-    "linktopost": "3",
-    "timestamp": "1-1-2024",
-    "comments": [
-      {
-        "username": "Unregistered Flex Offender",
-        "timestamp": "YYYY-MM-DD HH",
-        "content": "Amazin'"
-      },
-      {
-        "username": "USERNAME HERE",
-        "content": "dsaadw",
-        "timestamp": "12-10-2023"
-      }
-    ]
-  },
-
-  {
-    "title": "Blog #5",
-    "content": "Content for Blog #3",
-    "shortContent": "Content for Blog #1",
-    "photoURL": "http://placekitten.com/230/146",
-    "linktopost": "3",
-    "timestamp": "12-28-2023",
-    "comments": [
-      {
-        "username": "Unregistered Flex Offender",
-        "timestamp": "YYYY-MM-DD HH",
-        "content": "Amazin'"
-      },
-      {
-        "username": "USERNAME HERE",
-        "content": "dsaadw",
-        "timestamp": "12-10-2023"
-      }
-    ]
   }
 ]
