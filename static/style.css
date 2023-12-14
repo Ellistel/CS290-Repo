@@ -393,9 +393,15 @@ header a {
   margin-right: 15px;
 }
 
+#post-content{
+
+  max-width: 400px;
+}
+
 .comments-section-title h2{
 
   border-bottom: 2px solid bisque;
+  margin-left: 10px;
 }
 
 .comment-post-container{
