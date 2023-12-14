@@ -38,7 +38,7 @@ app.get("/:postnumber", function (req, res, next) {
     if (keysArray.length >= number) {
         var postTodisplay = serverData[number - 1]
         console.log("post to display:", postTodisplay)
-        if (!(isNaN(number)) && !number.includes('.') && (parseInt(number) >= 1 && parseInt(number) <= 8)) {
+        if (!(isNaN(number)) && !number.includes('.') && (parseInt(number) >= 1 && parseInt(number) <= keysArray.length)) {
             res.status(200).render("specificblogpost", {
                 posts: [postTodisplay],
                 comments: postTodisplay.comments,
@@ -68,6 +68,11 @@ app.post('/testmain', function(req,res,next){
 
 
     }
+
+    else
+    {
+        var ShortContent = req.body.content
+    }
     serverData.push({
         title: req.body.title,
         content: req.body.content,
@@ -75,7 +80,7 @@ app.post('/testmain', function(req,res,next){
         photoURL: req.body.photoURL,
         linktopost: keysArray.length + 1,
         timestamp: reformattedTimestamp,
-        comments: [{}],
+        comments: []
     
     
     

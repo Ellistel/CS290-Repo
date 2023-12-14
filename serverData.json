@@ -3,7 +3,7 @@
     "title": "Blog #1",
     "content": "Content for Blog #1",
     "shortContent": "Content for Blog #1",
-    "photoURL": "http://placekitten.com/230/140",
+    "photoURL": "https://i.imgur.com/rAEkMBd.jpeg",
     "linktopost": "1",
     "timestamp": "12-11-2023",
     "comments": []
@@ -12,7 +12,7 @@
     "title": "Blog #2",
     "content": "Content for Blog #2",
     "shortContent": "Content for Blog #1",
-    "photoURL": "http://placekitten.com/230/150",
+    "photoURL": "https://i.imgur.com/SIlqBss.jpeg",
     "linktopost": "2",
     "timestamp": "12-8-2023",
     "comments": [
@@ -27,7 +27,7 @@
     "title": "Blog #3",
     "content": "Content for Blog #3",
     "shortContent": "Content for Blog #1",
-    "photoURL": "http://placekitten.com/230/146",
+    "photoURL": "https://i.imgur.com/zgpX6GX.jpeg",
     "linktopost": "3",
     "timestamp": "10-9-2003",
     "comments": [
@@ -35,77 +35,16 @@
         "username": "Unregistered Flex Offender",
         "timestamp": "YYYY-MM-DD HH",
         "content": "Amazin'"
-      },
-      {
-        "username": "USERNAME HERE",
-        "content": "dsaadw",
-        "timestamp": "12-10-2023"
       }
-    ]
-  },
-  {
-    "title": "sfoij",
-    "content": "asd",
-    "photoURL": "asdas",
-    "linktopost": 4,
-    "timestamp": "12-14-2023",
-    "comments": [
-      {}
-    ]
-  },
-  {
-    "title": "asdasd",
-    "content": "asd",
-    "photoURL": "asd",
-    "linktopost": 5,
-    "timestamp": "12-14-2023",
-    "comments": [
-      {}
-    ]
-  },
-  {
-    "title": "asdasd",
-    "content": "asd",
-    "photoURL": "asd",
-    "linktopost": 6,
-    "timestamp": "12-14-2023",
-    "comments": [
-      {}
     ]
   },
   {
     "title": "Cat of the Day",
-    "content": "Cool Cat of the Day",
+    "content": "Cool cat of the day",
+    "shortContent": "Cool cat of the day",
     "photoURL": "https://catoftheday.com/archive/2023/August/15.jpg",
-    "linktopost": 7,
+    "linktopost": 4,
     "timestamp": "12-14-2023",
-    "comments": [
-      {},
-      {
-        "username": "weqewqewq",
-        "content": "eqwwqeeqw",
-        "timestamp": "12-14-2023"
-      },
-      {
-        "username": "weqewqewq",
-        "content": "eqwwqeeqw",
-        "timestamp": "12-14-2023"
-      },
-      {
-        "username": "ewqewq",
-        "content": "ewqqewqeww",
-        "timestamp": "12-14-2023"
-      },
-      {
-        "username": "eqwqeweqw",
-        "content": "qewqweeqw",
-        "timestamp": "12-14-2023"
-      },
-      {
-        "username": "weq",
-        "content": "wqeewqfsajhfsadlhfjsaklfhsakjhfsadkdshjfkdhlfadkhdsajklfhakjfhdsaklfhdsakfjhdsaklfhdaskjfhdsaklfhkdjsafhdskalfhajdkswfhdskjafhsdakhfdsakjfhaskdfhdasjkfhdkslahfkasdhfdkasjfhkdasjhfkdsalhfjkdsahfadslhfksdajfhadslkfjhdsaklfhasdjfahdls",
-        "timestamp": "12-14-2023"
-      }
-    ]
+    "comments": []
   }
 ]

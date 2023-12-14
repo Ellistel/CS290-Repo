@@ -216,13 +216,17 @@ header a {
   padding-left:98px;
   padding-right:98px;
 }
+.blog-portion {
+  display: flex;
+  flex-direction: column;
+}
 
 .blog-title {
   font-size: 18px;
-  text-decoration: bold;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 5px;
-  margin-right: 180px;
+  margin-right: 0;
   font-family: "Lucida Sans", monospace;
 }
 
@@ -286,6 +290,9 @@ header a {
 
 .blog-post-title {
   margin-left: 10px;
+  max-width: 250px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .blog-post-text {
@@ -300,6 +307,13 @@ header a {
 .filter-portion{
   margin-left: 15px;
   margin-right: 80px;
+}
+
+.main-blog-post-contents
+{
+  max-width: 650px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .main-blog-post-container {
@@ -323,6 +337,9 @@ header a {
 
 .main-blog-post-title {
   margin-bottom: 20px;
+  max-width: 650px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .main-post-image {
@@ -342,6 +359,8 @@ header a {
 .main-post-contents {
   text-align: justify;
   max-width: 650px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 .comment-container{
   display: flex;
@@ -366,6 +385,8 @@ header a {
 .comment-content{
   margin-left:20px;
   max-width: 750px;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .username-field{
