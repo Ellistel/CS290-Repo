@@ -72,5 +72,15 @@
     "comments": [
       {}
     ]
+  },
+  {
+    "title": "Cat of the Day",
+    "content": "Cool Cat of the Day",
+    "photoURL": "https://catoftheday.com/archive/2023/August/15.jpg",
+    "linktopost": 7,
+    "timestamp": "12-14-2023",
+    "comments": [
+      {}
+    ]
   }
 ]
