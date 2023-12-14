@@ -177,58 +177,47 @@ if (makeBlog) {
 
 var postComment = document.getElementById("comment-submit-button")
 
-function getPostNumberFromURL()
-{
-    var path = window.location.pathname
+function getPostNumberFromURL() {
+    var path = window.location.pathname;
     var pathParts = path.split('/')
     return pathParts[1]
 }
 
+if (postComment) {
+    postComment.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
-if(postComment)
-{
-
-    postComment.addEventListener("click",function(event)
-    
-    {
         console.log("Event listener triggered!")
         var comment = document.getElementById("postContent").value
         var name = document.getElementById("selectUsername").value
-        console.log("USERNAME: ", username)
-        if(!comment || !name)
-        {
-        alert("you must fill out content field")
-        }
-        else
-        {
+        console.log("USERNAME: ", name)
+
+        if (!comment || !name) {
+            alert("You must fill out the content field")
+        } else {
             var postId = getPostNumberFromURL()
-           var promise = fetch("/" + postId + "/addComment",
-                {method: "POST",
+
+            fetch("/" + postId + "/addComment", {
+                method: "POST",
                 body: JSON.stringify({
                     username: name,
                     content: comment
-                }), headers:{
+                }),
+                headers: {
                     "Content-Type": "application/json"
-                }}
-            )
-            promise.then(function(res){
-
-                if(res.status!==200)
-                {
-                    alert("am error occured")
                 }
             })
+                .then(function (res) {
+                    if (res.status !== 200) {
+                        alert("An error occurred")
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error:", error)
+                });
         }
 
-
-    }
-    
-    
-    )
-
-
-
-
+    })
 }
 
 var filterClick = document.getElementById("filter-update-button")
