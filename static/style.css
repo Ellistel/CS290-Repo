@@ -396,6 +396,7 @@ header a {
 #post-content{
 
   max-width: 400px;
+  min-width: 375px;
 }
 
 .comments-section-title h2{
