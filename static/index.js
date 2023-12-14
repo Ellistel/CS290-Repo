@@ -174,6 +174,7 @@ if (makeBlog) {
 
 
 
+
 var postComment = document.getElementById("comment-submit-button")
 
 function getPostNumberFromURL()

@@ -42,5 +42,35 @@
         "timestamp": "12-10-2023"
       }
     ]
+  },
+  {
+    "title": "sfoij",
+    "content": "asd",
+    "photoURL": "asdas",
+    "linktopost": 4,
+    "timestamp": "12-14-2023",
+    "comments": [
+      {}
+    ]
+  },
+  {
+    "title": "asdasd",
+    "content": "asd",
+    "photoURL": "asd",
+    "linktopost": 5,
+    "timestamp": "12-14-2023",
+    "comments": [
+      {}
+    ]
+  },
+  {
+    "title": "asdasd",
+    "content": "asd",
+    "photoURL": "asd",
+    "linktopost": 6,
+    "timestamp": "12-14-2023",
+    "comments": [
+      {}
+    ]
   }
 ]
