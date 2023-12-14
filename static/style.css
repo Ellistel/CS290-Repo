@@ -9,39 +9,34 @@ header {
   background-color: #adffde;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   height: 120px;
 }
-
-
-
 
 header a {
   font-family: "Lucida Sans", monospace;
   color: rgb(0, 2, 14);
   text-decoration: none;
-  position: absolute;
   left: 5px;
   bottom: 35px;
   padding-right: 5px;
   padding-left: 20px;
-  font-size: 45px; 
+  font-size: 70px; 
   color: #000000; 
 }
 
-.header-image-container {
-  padding-left: 500px;
-  position: absolute; 
-  right: 5px;
-}
-
-
-
 .site-title {
-  font-size: 50px; 
   color: #000000; 
   text-decoration: none; 
 }
+
+.site-title i {
+  font-size: 65px;
+  margin-left: 30px;
+}
+
+
 
 .alignment{
   display:flex;
@@ -88,72 +83,74 @@ header a {
 }
 
 
-.login-container{
-  border: 2px solid bisque;
-  padding-top: 10px;
-  padding-left: 5px;
-  display:flex;
-  flex-direction: column;
-}
 
-.sign-up{
-  font-family: "Lucida Sans", monospace;
-  margin-left: 10px;
-  padding-left: 15px;
-}
-
-#sign-up-link a:hover
-{
-  text-decoration: underline;
-}
-
-
-.option-buttons{
+.header-buttons {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid bisque;
-  border-top: 2px solid bisque;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-
+  margin-right: 116px; 
+  margin-top: 82px;
 }
 
-.credentials{
+#login-dropdown {
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 160px;
+  height: 175px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+#login-dropdown form label {
+  display: block;
+  color: black;
+}
+
+#login-dropdown form input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#login-dropdown form input[type="submit"] {
   font-family: "Lucida Sans", monospace;
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  margin-bottom: 10px;
+  color: black;
+  margin-top: 4px;
+  cursor: pointer;
 }
 
-
-.credentials label{
-  padding-right: 5px;
-  padding-left: 5px;
+#login-dropdown p {
+  font-size: 13px;
+  margin-bottom: 10px
 }
 
-.credentials input {
+#login-dropdown button {
+  border: 1px solid #ccc;
+  border-radius: 3px;
   font-family: "Lucida Sans", monospace;
-  margin-right: 10px; 
+  cursor: pointer;
 }
 
-.credentials input[type="submit"] {
+#login-btn {
+  cursor: pointer;
+  font-family: "Lucida Sans", monospace;
   background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
-  color: white; 
-  padding: 5px 10px; 
-  border: 1px solid white;
-  border-radius: 5px; 
-  cursor: pointer; 
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
 }
 
-.credentials input[type="submit"]:hover {
-  background: linear-gradient(90deg, #0066CC 0%, #74d5e8 100%);
-  color: #000000;
-  border: solid 1px #000000;
+#login-btn:hover + #login-dropdown,
+#login-dropdown:hover {
+  margin-right: 20px;
+  display: block;
+  font-family: "Lucida Sans", monospace;
+  background: #cef7e6;
 }
+
 
  .filter-container {
   font-family: "Lucida Sans", monospace;

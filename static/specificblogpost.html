@@ -15,29 +15,23 @@
   
   <body>
     <header>
-      <div class="header-image-container">
-        <img src="http://placekitten.com/200/100" alt="Blog_Site_Photo">
+      <h1 class="site-title"><a href="#">Cat Cafe</a><i class='fas fa-cat'></i></h1>
+      <div class="header-buttons">
+        <div class="login-signup">
+          <button id="login-btn">Login</button>
+          <div id="login-dropdown" class="login-dropdown">
+            <form action="/login" method="post">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <input type="submit" value="Login">
+            </form>
+            <p id="sign-up-link"><p>Don't have an account?</p><button onclick="window.location.href='/signup'">Sign Up</button></p>
+          </div>
+        </div>
       </div>
-
-      <h1 class="site-title"><a href="#">Cat Cafe</a></h1>
     </header>
-
-    <div class="login-container">
-      <div class="credentials">
-        <form action="/login" method="post">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-
-          <input type="submit" value="Login">
-        </form>
-      </div>
-      <div class="sign-up">
-        <p id="sign-up-link">Don't have an account? <a href="/signup">Sign Up</a></p>
-      </div>
-    </div>
 
     <div class="main-blog-post-container">
       <div class="main-blog-post">
